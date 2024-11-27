@@ -12,6 +12,12 @@
     <title>My Portfolio</title> 
  <script src="https://kit.fontawesome.com/0b91e8b090.js" crossorigin="anonymous"></script>
    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function () {
+  emailjs.init("B94qnxlk6c5Teasln"); 
+})();
+</script>
 
   </head>
 
@@ -250,14 +256,14 @@
       <h2>Get In Touch</h2>
         <hr>
 
-   <form method="POST" action="sendemail.php" class="form-container">
+   <form method="POST" id="contactForm" class="form-container">
 
     <div class="row">
     <div class="col-25">
       <label for="fname">Your Name</label>
     </div>
     <div class="col-75">
-      <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+      <input type="text" id="name" name="name" placeholder="Your name.." required>
     </div>
   </div>
     <div class="row">
