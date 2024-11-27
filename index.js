@@ -1,6 +1,6 @@
 
 const typewriter = new Typewriter("#typewriter", {
-  strings: ["Web Developer", "Virtual Assistant", "Persuing Full Stack Web Development"],
+  strings: ["Web Developer", "SEO Specialist", "Persuing Full Stack Web Development"],
   autoStart: true,
   loop: false, 
   cursor: "",
@@ -34,3 +34,24 @@ document.querySelector(".contact-me-btn").onclick = function () {
   // Open the mailto link
   window.location.href = mailtoLink;
 };
+
+
+// Send form data using EmailJS
+
+  document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+            
+    emailjs
+      .sendForm("service_7p3behm", "template_zsd25ih", this)
+      .then(() => {
+        alert("Message sent successfully!");
+        window.location.href = "/";
+      })
+      .catch((error) => {
+        console.error("Failed to send message:", error);
+        alert("Failed to send message. Please try again.");
+      });
+  });
+
+  })
