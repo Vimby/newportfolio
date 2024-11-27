@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $name = htmlspecialchars($_POST['name']);
+    $name = htmlspecialchars($_POST['firstname']);
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
     $to = "vimbysbuzz@gmail.com"; 
